@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_002_var</title>
+<script type="text/javascript">
+/*
+  변수: 프로그램이 어떤 값을 메모리에 저장해 두기 위한 공간이다.
+ 
+  식별자 규칙
+	1. 첫번째 문자는 A-Za-z_$만 사용한다.
+	2. 나머지 문자는 A-Za-z0-9dmf 사용한다.
+	
+	korea_scroe(o)
+	averageScore(o)
+	1234Test(X)
+	3. 자바스크립트 예약어는 사용할 수 없다.
+	
+  */
+
+ //전역변수
+ var data=10.6;
+ var grade="A등급";
+//data type: 자료형
+var na;
+ var d=0, f=4;
+ var g=6, h;
+
+function process(){
+	var np='korea'; //지역변수
+	document.write(data+" "+ typeof(data)+"<br/>"); //10.6 number
+	document.write(grade+" "+ typeof(grade)+"<br/>"); //A등급 string
+	document.write(np+"  "+typeof(np)+"<br/>");
+	document.write(na+"  "+typeof(na)+"<br/>");
+}
+</script>
+</head>
+<body>
+
+<button onclick="process()">click</button>
+
+
+</body>
+</html>

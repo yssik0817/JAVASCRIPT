@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_003_dataType</title>
+<script type="text/javascript">
+var num=10;
+document.write("num="+typeof num + "<br/>");
+
+var str='javascript';
+document.write("str= "+typeof str + "<br/>");
+
+var check= true;
+document.write("check= "+typeof check+ "<br/>");
+
+var data;
+document.write("data= "+typeof data + "<br/>");
+
+var ko=null;
+document.write("ko= "+typeof ko + "<br/>"); //object
+
+var arr=[10,20,30];
+document.write("arr= "+typeof arr + "<br/>"); // object
+
+var rect={width:10, height:20};
+document.write("rect= "+typeof rect + "<br/>"); //object
+
+var add=function(){return "val"};
+document.write("add= "+add+"<br/>");
+document.write("add= "+add()+"<br/>");
+document.write("add= "+typeof add+"<br/>");
+document.write("arr[0]="+arr[0]+"<br/>"); //10
+document.write("rect.width="+rect.width+"<br/>"); //10
+
+var sum=function(a,b){return a+b};
+document.write("sum(a,b)="+sum(5,3)+"<br/>");
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

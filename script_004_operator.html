@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_004_operator</title>
+
+
+	<!-- 연산자
+	1. 산술연산자: + - 
+	2. 문자결합연산자(+)
+	3. 대입연산자:	= += -= *= /=(대입복합연산자)
+	4. 증감연산자: 증가연산자(++) 감소연산자(--)
+	5. 비교연산자(===, !==, ==, != > < >= <=
+	6. 논리연산자: &&(and) ||(or) !(not)
+	7. 삼항(조건)연산자: 식? 참: 거짓 
+	8. 데이터타입연산자(typeof, instanceof) -->
+
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+var x=10; //number
+var y="10" // string
+var z=20;
+document.write(typeof(x)+"   "+typeof(y)+"<br/>");
+document.write(x+z+"<br/>"); //30
+document.write(x+y+"<br/>"); //1010
+document.write(x+true+"<br/>");
+
+var a=0;
+//a=a+1;
+a +=1;
+document.write(a+"<br/>");
+
+//리터널: 자체의 값
+var b=4;
+b++;
+document.write(b+"<br/>");
+
+// 값과 데이터 타입 비교
+document.write((x===y)+"<br/>"); //false
+//값만 비교
+document.write((x==y)+"<br/>"); //true
+
+document.write((x!==y)+"<br/>"); //true
+document.write((x!=y)+"<br/>"); //false
+
+var result= 3>2 && 10>5;
+document.write(result+"<br/>");
+document.write(!result+"<br/>");
+
+var totalPage=23%5==0 ? 4 : 5;
+document.write(totalPage+"<br/>");
+
+var arr=[1,2,3];
+document.write((typeof arr) + '<br/>');
+document.write((arr instanceof Array)+'<br/>');
+
+var rect={width:10, height:20};
+document.write((typeof rect)+"<br/>");
+document.write((rect instanceof Object)+'<br/>');
+
+document.write((typeof x)+'<br/>'); //number
+document.write((x instanceof Number)+'<br/>'); //number
+
+//number -> Number
+var nn=new Number(x);
+document.write((typeof nn)+"<br/>"); //object
+document.write((nn instanceof Number)+"<br/>");
+
+</script>
+</body>
+</html>
