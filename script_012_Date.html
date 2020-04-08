@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_012_Date</title>
+</head>
+<body>
+<script type="text/javascript">
+var date = new Date();
+//Wed Apr 08 2020 11:39:28 GMT+0900 (대한민국 표준시)
+document.write(date+"<br/>");
+//년도
+document.write(date.getFullYear()+"<br/>");
+//월
+document.write(date.getMonth()+1+"<br/>");
+//일
+document.write(date.getDate()+"<br/>");
+//요일 0일요일, 6토요일
+document.write(date.getDay()+"<br/>");
+//시 (0~23)
+document.write(date.getHours()+"<br/>");
+//분
+document.write(date.getMinutes()+"<br/>");
+//초
+document.write(date.getSeconds()+"<br/>");
+</script>
+</body>
+</html>

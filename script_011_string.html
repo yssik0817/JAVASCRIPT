@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_011_string</title>
+</head>
+<body>
+<script type="text/javascript">
+var data = 'It \'s alright';
+
+// It's alright
+document.write(data+"<br/>");
+
+// keyword 의밀를 부여해서 정의한 단어
+// length : 문자열의 길이 리턴
+document.write(data.length + "<br/>");
+
+/* 
+특정범위 데이터를 리턴해주는 3가지 메소드
+1. slice(start, end): +, - 모두 가능
+2. substring(start, end): +영역만 가능, 음수영역 불가능
+3. substr(start, length)
+*/
+
+var str="Apple, Banna, Kiwi";
+document.write(str.slice(7,12)+"<br/>");
+document.write(str+"<br/>");
+
+document.write(str.slice(-12,-6) + "<br/>");
+document.write(str.substring(7,12)+"<br/>");
+document.write(str.substring(-12,-6) + "<br/>");
+document.write(str.substr(7,6)+"<br/>");
+document.write(str.substr(-12,6)+"<br/>");
+
+str= "Please visit Microsoft! and microsoft Microsoft";
+document.write(str.replace("Microsoft","W3Schools")+"<br/>");
+document.write(str+"<br/>");
+
+// i: 대소문자 구분없음. g: 모든 문자열
+document.write(str.replace(/Microsoft/g,"W3Schools")+"<br/>");
+document.write(str.replace(/Microsoft/gi,"W3Schools")+"<br/>");
+
+var text1 = "Hello world";
+//HELLO WORLD
+document.write(text1.toUpperCase()+"<br/>");
+//hello world
+document.write(text1.toLowerCase()+"<br/>");
+
+var text2 = "javascript";
+document.write(text1+text2+"<br/>");
+document.write(text1.concat(text2)+"<br/>");
+//Hello world javascript
+document.write(text1.concat(" ",text2)+"<br/>");
+//Hello world,javascript
+document.write(text1.concat(",",text2)+"<br/>");
+
+var str2 = "HELLO WORLD";
+//H
+document.write(str2.charAt(0)+"<br/>");
+// 유니코드 리턴
+// A:65 a:97 '0':48
+document.write(str2.charCodeAt(0)+"<br/>");
+
+var txt = "a, b, c, d, e";
+//string
+document.write(typeof txt + "<br/>");
+
+var arr = txt.split(",");
+document.write(typeof arr+" " + (arr instanceof Array)+"<br/>");
+
+for(var index in arr){
+	document.write(arr[index]+"<br/>");
+}
+
+var txt2 = "hijklmn";
+var arr2=txt2.split("");
+for(var index in arr2){
+document.write(arr2[index]+"<br/>");
+}
+
+var str3= "The rain in SPAIN stays mainly in the plain";
+// SPAIN
+document.write(str3.match("SPAIN")+"<br/>");
+// NULL : 검색데이터와 일치하는 문자열이 없으면 null반환
+document.write(str3.match("spain")+"<br/>");
+// ain, ain, ain
+document.write(str3.match(/ain/g)+"<br/>");
+// ain, AIN, ain, ain
+document.write(str3.match(/ain/gi)+"<br/>");
+
+//값: 5 ain이 시작하는위치
+document.write(str3.search('ain')+"<br/>");
+
+//검색데이터와 일치하는 문자열이 없으면 -1 리턴
+document.write(str3.search("spain")+"<br/>");
+
+//무조건 처음에 일치하는 인덱스 리턴 : 5
+document.write(str3.search(/ain/g)+"<br/>");
+</script>
+</body>
+</html>

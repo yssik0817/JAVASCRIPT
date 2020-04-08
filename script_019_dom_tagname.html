@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_019_dom_tagname</title>
+</head>
+<body>
+	<p>conten1</p>
+	<p>conten2</p>
+	<p>conten3</p>
+	<p>conten4</p>
+	
+	<script type="text/javascript">
+	var pNode=document.getElementsByTagName("p");
+	console.log(pNode.length);
+	console.log(typeof pNode);
+	console.log(pNode instanceof HTMLCollection);
+	console.log(pNode.item(0));
+	console.log(pNode[0]);
+	pNode[0].style.backgroundColor="yellow";
+	pNode.item(1).style.border="2px solid red";
+	</script>
+</body>
+</html>

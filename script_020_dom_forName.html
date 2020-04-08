@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_020_dom_forName</title>
+<script type="text/javascript">
+function process(){
+	var fnam=document.frm.fname;
+	console.log(fname.value);
+	console.log(fname.defaultValue);
+	return false;
+}
+</script>
+</head>
+<body>
+<form name="frm">
+	<label for="fname">이름</label>
+	<input type="text" name="fname"	id="fname" value="이름..." />
+	<button onclick="return process()">click</button>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_017_RegExp</title>
+</head>
+<body>
+<script type="text/javascript">
+//Regular Expressions(정규화 표현식)
+
+var str="The Best things in best life are best free";
+
+document.write(str.match("e")+"<br/>");		//찾은 문자
+document.write(str.search(/e/)+"<br/>");	//맨처음 인덱스 번호
+
+var patt=/e/;
+//true
+document.write(patt.test(str)+"<br/>");
+
+//false
+patt=/y/i;
+document.write(patt.test(str)+"<br/>");
+
+//일치하는 값이 없으면 null 리턴한다.
+document.write(patt.exec(str)+"<br/>");
+//e
+document.write(/e/.exec(str)+"<br/>");
+document.write("<hr/>");
+
+var ex=new RegExp("e");
+//true
+document.write(ex.test(str)+"<br/>");
+//e
+document.write(ex.exec(str)+"<br/>");
+//RegExp("검색 문자열","옵션")
+ex=new RegExp("F","ig");
+//true
+document.write(ex.test(str)+"<br/>");
+//f
+document.write(ex.exec(str)+"<br/>");
+</script>
+</body>
+</html>
