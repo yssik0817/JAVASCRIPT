@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_022_dom_childNodes</title>
+</head>
+<body>
+	<div id="wrap">
+		<p>content</p>
+		<a href="">세미나 장소</a>
+		<span><a href="">정보</a></span>
+	</div>
+	
+	<script type="text/javascript">
+	
+	//div요소의 모든 자식 노드를 리턴한다.
+	var divChildNode = document.getElementById("wrap").childNodes;
+	//[object NodeList]
+	document.write(divChildNode+"<br/>");
+	//7: 엔터 4개 + 자식요소 3개
+	document.write(divChildNode.length+"<br/>");
+	
+	var divChildren = document.getElementById("wrap").children;
+	//[object HTMLCollection]
+	document.write(divChildren+"<br/>");
+	//3 : 자식요소만 인식
+	document.write(divChildren.length+"<br/>");
+	
+	var sNode = document.getElementsByTagName("span")[0];
+	var sFirstChild=sNode.firstChild;
+	//http://localhost:8090/jsdemo/script_022_dom_childNodes.html
+	document.write(sFirstChild+"<br/>");
+	sFirstChild.style.backgroundColor="red";
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_023_dom_nodetype</title>
+</head>
+<body>
+<div id="wrap">
+	<p>content1</p>	
+	<p>content2</p>	
+	<span><a href="#">이동</a></span>
+</div>
+
+<script type="text/javascript">
+var pNode=document.getElementsByTagName("p")[1];
+//[object HTMLParagraphElement]
+document.write(pNode + "<br/>");
+
+//1 P null
+document.write(pNode.nodeType+" " + 
+		pNode.nodeName + " "+ 
+		pNode.nodeValue+"<br/>");
+		
+var divAttr= document.getElementById("wrap").attributes[0];
+//[object Attr]
+document.write(divAttr + "<br/>");
+
+//2 id wrap
+document.write(divAttr.nodeType+" " + 
+		divAttr.nodeName + " "+ 
+		divAttr.nodeValue+"<br/>");
+		
+var aNode=document.getElementsByTagName("a")[0];
+//http://localhost:8090/jsdemo/script_023_dom_nodetype.html#
+document.write(aNode+"<br/>");
+
+//3 #text 이동
+var textNode=aNode.firstChild;
+document.write(textNode.nodeType+" " + 
+		textNode.nodeName + " "+ 
+		textNode.nodeValue+"<br/>");
+</script>
+</body>
+</html>
