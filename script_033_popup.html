@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>script_033_popup</title>
+<style type="text/css">
+	#popup{
+		width: 301px;
+		height: 351px;
+		border: 1px solid black;
+		position: fixed;
+		left: 30%;
+		top: 100px;
+		background-color: #ffffff;
+	};
+</style>
+
+<script type="text/javascript">
+	window.onload=function(){
+		document.getElementsByTagName('area')[0].onclick=function(){
+		var imgEle = document.getElementById("popup");
+		imgEle.style.width='0px';
+		imgEle.style.height='0px';
+		imgEle.style.visibility='hidden';
+			}
+			};
+</script>
+
+
+</head>
+<body>
+
+	<div>JavaScript is the programming language of HTML and the Web.
+
+		JavaScript is easy to learn. This tutorial will teach you JavaScript
+		from basic to advanced. Examples in Each Chapter With our "Try it
+		Yourself" editor, you can edit the source code and view the result.
+
+		Example My First JavaScript Click me to display Date and Time We
+		recommend reading this tutorial, in the sequence listed in the left
+		menu. Learn by Examples Examples are better than 1000 words. Examples
+		are often easier to understand than text explanations. This tutorial
+		supplements all explanations with clarifying "Try it Yourself"
+		examples. JavaScript Examples If you try all the examples, you will
+		learn a lot about JavaScript, in a very short time! Why Study
+		JavaScript? JavaScript is one of the 3 languages all web developers
+		must learn: 1. HTML to define the content of web pages 2. CSS to
+		specify the layout of web pages 3. JavaScript to program the behavior
+		of web pages Web pages are not the only place where JavaScript is
+		used. Many desktop and server programs use JavaScript. Node.js is the
+		best known. Some databases, like MongoDB and CouchDB, also use
+		JavaScript as their programming language. Did You Know? JavaScript and
+		Java are completely different languages, both in concept and design.</div>
+
+	<div id="popup">
+		<img src="images/popup.jpg" usemap="#pop" />
+		<map name="pop" id="pop">
+			<area shape="rect" coords="255, 332, 290, 345" href="#" alt="창닫기" />
+		</map>
+	</div>
+</body>
+</html>
